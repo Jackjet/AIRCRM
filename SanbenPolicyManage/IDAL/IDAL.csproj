@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0706FA2-977C-4523-B093-F57804756498}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Sanben.IDAL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CodematicDemo.IDAL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPiaomeng_policy.cs" />
+    <Compile Include="ISysManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="I517NaBenefit.cs" />
+    <Compile Include="I51bookPolicy.cs" />
+    <Compile Include="IAirComMan.cs" />
+    <Compile Include="IAirMan.cs" />
+    <Compile Include="IAirport_Detail.cs" />
+    <Compile Include="IAirport_Unknown.cs" />
+    <Compile Include="IAPI380Ticket.cs" />
+    <Compile Include="IBackupFlight.cs" />
+    <Compile Include="IBackupInsurance.cs" />
+    <Compile Include="IBackupLog_Opera.cs" />
+    <Compile Include="IBackupOrderInfo.cs" />
+    <Compile Include="IBackupPassenger.cs" />
+    <Compile Include="IBackupPurchaseOrderInfo.cs" />
+    <Compile Include="IBackupRefund.cs" />
+    <Compile Include="IBaQianYiPolicy.cs" />
+    <Compile Include="Icabin_description.cs" />
+    <Compile Include="ICity_Man.cs" />
+    <Compile Include="ICity_Man1.cs" />
+    <Compile Include="IctripPolicyGaiqian.cs" />
+    <Compile Include="IctripPolicyOptions.cs" />
+    <Compile Include="IctripPolicyRebate.cs" />
+    <Compile Include="IDeletePolicy.cs" />
+    <Compile Include="IEtermRT.cs" />
+    <Compile Include="IexcGetRateList.cs" />
+    <Compile Include="IFlight.cs" />
+    <Compile Include="Igaiqian_retirement.cs" />
+    <Compile Include="IGaiQianWangFanRetirement.cs" />
+    <Compile Include="IGetRateList.cs" />
+    <Compile Include="IInsurance.cs" />
+    <Compile Include="IJinri_Order_Response.cs" />
+    <Compile Include="IJinRiOrderByPnr.cs" />
+    <Compile Include="IkuXunPolicyOptions.cs" />
+    <Compile Include="ILog_Opera.cs" />
+    <Compile Include="Imenu.cs" />
+    <Compile Include="INewOrderInfo.cs" />
+    <Compile Include="IOrderinfo.cs" />
+    <Compile Include="IOrderInfo2.cs" />
+    <Compile Include="IorderInterfaceConfig.cs" />
+    <Compile Include="IorderUser.cs" />
+    <Compile Include="IPassenger.cs" />
+    <Compile Include="Iplatform_config.cs" />
+    <Compile Include="IPlatform_type.cs" />
+    <Compile Include="IplatformB2B_name.cs" />
+    <Compile Include="IplatformB2B_ticket_account.cs" />
+    <Compile Include="IPlatfrom_ZY_type.cs" />
+    <Compile Include="IPolicy.cs" />
+    <Compile Include="IPolicy_filter.cs" />
+    <Compile Include="IPolicy_filter_wangfan.cs" />
+    <Compile Include="IPolicy_Mission.cs" />
+    <Compile Include="Ipolicy_options.cs" />
+    <Compile Include="Ipolicy_options_wangfan.cs" />
+    <Compile Include="Ipolicy_zy_addPrice.cs" />
+    <Compile Include="Ipolicy_zy_Base.cs" />
+    <Compile Include="Ipolicy_zy_filter.cs" />
+    <Compile Include="Ipolicy_zy_leavepoint.cs" />
+    <Compile Include="Ipolicy_zy_pat.cs" />
+    <Compile Include="Ipolicy_zy_space.cs" />
+    <Compile Include="Ipolicy_zy_ticket.cs" />
+    <Compile Include="Ipolicy_zy_tuigaiqian.cs" />
+    <Compile Include="IPurchaseOrderInfo.cs" />
+    <Compile Include="Irebate.cs" />
+    <Compile Include="Irebate_wangfan.cs" />
+    <Compile Include="Irefund.cs" />
+    <Compile Include="IRegister.cs" />
+    <Compile Include="IROUTE.cs" />
+    <Compile Include="Istatus.cs" />
+    <Compile Include="ISyonline.cs" />
+    <Compile Include="ISYS_MenuList.cs" />
+    <Compile Include="ISYS_Role.cs" />
+    <Compile Include="Isys_user.cs" />
+    <Compile Include="ISYSAdminRole.cs" />
+    <Compile Include="IsysAdminUser.cs" />
+    <Compile Include="Isysdiagrams.cs" />
+    <Compile Include="ISystemConfig.cs" />
+    <Compile Include="IT_Airport.cs" />
+    <Compile Include="IT_Airport2.cs" />
+    <Compile Include="IT_Carrier.cs" />
+    <Compile Include="ITable_1.cs" />
+    <Compile Include="Itest_ado.cs" />
+    <Compile Include="Itestforpolicy.cs" />
+    <Compile Include="IThtest.cs" />
+    <Compile Include="ITicket380Policy.cs" />
+    <Compile Include="Itime_limit.cs" />
+    <Compile Include="IUploadPolicyResult.cs" />
+    <Compile Include="IuploadTask.cs" />
+    <Compile Include="I查询.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

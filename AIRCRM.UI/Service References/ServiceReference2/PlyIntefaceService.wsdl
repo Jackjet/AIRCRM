@@ -1,0 +1,3780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx">
+      <s:element name="SPOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="policyId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airCo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TakeOffDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPOneResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPOne_ByDisposalSynchronization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="policyId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPOne_ByDisposalSynchronizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPOne_ByDisposalSynchronizationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPLastDataDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPLastDataDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPLastDataDeleteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAirCo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAirCoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAirCoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeatDiscountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscountByAir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscountByAirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeatDiscountByAirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscountByte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeatDiscountByteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeatDiscountByteResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tocity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airbunk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitudeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPExactitudeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderOnDutyTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderOnDutyTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProviderOnDutyTimeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderOnDutyTimeByPlyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderOnDutyTimeByPlyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProviderOnDutyTimeByPlyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_GZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_GZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNew_All_GZipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_AllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNew_AllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_V2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_V2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNew_All_V2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewSpecial_All">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewSpecial_AllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNewSpecial_AllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewSpecial_All_V2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNewSpecial_All_V2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewFD_All">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNewFD_AllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNewFD_AllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisposalSynchronizationSpecial_All_GZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisposalSynchronizationSpecial_All_GZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DisposalSynchronizationSpecial_All_GZipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByAirCodeGzip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aircode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByAirCodeGzipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPolicyByAirCodeGzipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByCityCodeGzip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fcity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByCityCodeGzipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPolicyByCityCodeGzipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByCityCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fcity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyByCityCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPolicyByCityCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeletePolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeletePolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeletePolicyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRestrictPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRestrictPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRestrictPolicyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_Note">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pnr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSpecial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPnrInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_NoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPbyPNR_NoteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_NoteByOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pnr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSpecial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPnrInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rtOfficeNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_NoteByOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPbyPNR_NoteByOfficeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOutticketInterior">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="platformGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderguid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderstate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifymsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOutticketInteriorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestOutticketInteriorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_TaoBao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tocity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airbunk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_TaoBaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPExactitude_TaoBaoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_All_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNew_All_V1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tocity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airbunk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPExactitude_V1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tocity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airbunk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="payWay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPExactitude_V2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tocity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airbunk" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="payWay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPExactitude_V3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPExactitude_V3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_Note_V1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pnr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSpecial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPnrInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SPbyPNR_Note_V1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPbyPNR_Note_V1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlantPriceData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZKId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AirCo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CW" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsSpecial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlantPriceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlantPriceDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_AirCo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="airCo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datetime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlreadyDisposalSynchronizationNew_AirCoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlreadyDisposalSynchronizationNew_AirCoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullGetPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullGetPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullGetPolicyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SPOneSoapIn">
+    <wsdl:part name="parameters" element="tns:SPOne" />
+  </wsdl:message>
+  <wsdl:message name="SPOneSoapOut">
+    <wsdl:part name="parameters" element="tns:SPOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationSoapIn">
+    <wsdl:part name="parameters" element="tns:SPOne_ByDisposalSynchronization" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationSoapOut">
+    <wsdl:part name="parameters" element="tns:SPOne_ByDisposalSynchronizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SPLastDataDelete" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SPLastDataDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAirCo" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAirCoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCity" />
+  </wsdl:message>
+  <wsdl:message name="GetCitySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscount" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscountByAir" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscountByAirResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscountByte" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeatDiscountByteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeSoapIn">
+    <wsdl:part name="parameters" element="tns:SPExactitude" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeSoapOut">
+    <wsdl:part name="parameters" element="tns:SPExactitudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProviderOnDutyTime" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProviderOnDutyTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProviderOnDutyTimeByPlyID" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProviderOnDutyTimeByPlyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFd" />
+  </wsdl:message>
+  <wsdl:message name="GetFdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_GZip" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_GZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_AllResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2SoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_V2" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2SoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewSpecial_All" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewSpecial_AllResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2SoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2SoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewFD_All" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNewFD_AllResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipSoapIn">
+    <wsdl:part name="parameters" element="tns:DisposalSynchronizationSpecial_All_GZip" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipSoapOut">
+    <wsdl:part name="parameters" element="tns:DisposalSynchronizationSpecial_All_GZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPolicyByAirCodeGzip" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPolicyByAirCodeGzipResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPolicyByCityCodeGzip" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPolicyByCityCodeGzipResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPolicyByCityCode" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPolicyByCityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeletePolicy" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeletePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:GetRestrictPolicy" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:GetRestrictPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteSoapIn">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_Note" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteSoapOut">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_NoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_NoteByOffice" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_NoteByOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOutticketInterior" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOutticketInteriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoSoapIn">
+    <wsdl:part name="parameters" element="tns:SPExactitude_TaoBao" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoSoapOut">
+    <wsdl:part name="parameters" element="tns:SPExactitude_TaoBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZipSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZip" />
+  </wsdl:message>
+  <wsdl:message name="GetZipSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_V1" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_All_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V1" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2SoapIn">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V2" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2SoapOut">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3SoapIn">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V3" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3SoapOut">
+    <wsdl:part name="parameters" element="tns:SPExactitude_V3Response" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1SoapIn">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_Note_V1" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1SoapOut">
+    <wsdl:part name="parameters" element="tns:SPbyPNR_Note_V1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlantPriceData" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlantPriceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoSoapIn">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_AirCo" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoSoapOut">
+    <wsdl:part name="parameters" element="tns:AlreadyDisposalSynchronizationNew_AirCoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullGetPolicy" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullGetPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPOneHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="policyId" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="toCity" type="s:string" />
+    <wsdl:part name="airCo" type="s:string" />
+    <wsdl:part name="TakeOffDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPOneHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="policyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="UpdateDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCityHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCityHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="plyid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetFdHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="toCity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFdHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="aircode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fcity" type="s:string" />
+    <wsdl:part name="ecity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fcity" type="s:string" />
+    <wsdl:part name="ecity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicyHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicyHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+    <wsdl:part name="rtOfficeNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="platformGuid" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="orderguid" type="s:string" />
+    <wsdl:part name="orderstate" type="s:string" />
+    <wsdl:part name="notifymsg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetZipHttpGetIn">
+    <wsdl:part name="file" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZipHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+    <wsdl:part name="payWay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+    <wsdl:part name="payWay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1HttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataHttpGetIn">
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="ZKId" type="s:string" />
+    <wsdl:part name="AirCo" type="s:string" />
+    <wsdl:part name="FromCity" type="s:string" />
+    <wsdl:part name="ToCity" type="s:string" />
+    <wsdl:part name="CW" type="s:string" />
+    <wsdl:part name="IsSpecial" type="s:string" />
+    <wsdl:part name="UpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="airCo" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicyHttpGetIn">
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="Sign" type="s:string" />
+    <wsdl:part name="OperateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SPOneHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="policyId" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="toCity" type="s:string" />
+    <wsdl:part name="airCo" type="s:string" />
+    <wsdl:part name="TakeOffDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPOneHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="policyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPOne_ByDisposalSynchronizationHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="UpdateDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPLastDataDeleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAirCoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetCityHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCityHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByAirHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatDiscountByteHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitudeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="plyid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderOnDutyTimeByPlyIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetFdHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="toCity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFdHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_GZipHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V2HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_AllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewSpecial_All_V2HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNewFD_AllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DisposalSynchronizationSpecial_All_GZipHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="aircode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByAirCodeGzipHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fcity" type="s:string" />
+    <wsdl:part name="ecity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeGzipHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fcity" type="s:string" />
+    <wsdl:part name="ecity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyByCityCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicyHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletePolicyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicyHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRestrictPolicyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+    <wsdl:part name="rtOfficeNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_NoteByOfficeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="platformGuid" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="orderguid" type="s:string" />
+    <wsdl:part name="orderstate" type="s:string" />
+    <wsdl:part name="notifymsg" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOutticketInteriorHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_TaoBaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetZipHttpPostIn">
+    <wsdl:part name="file" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZipHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_All_V1HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V1HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+    <wsdl:part name="payWay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V2HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="fromCity" type="s:string" />
+    <wsdl:part name="tocity" type="s:string" />
+    <wsdl:part name="airco" type="s:string" />
+    <wsdl:part name="airNo" type="s:string" />
+    <wsdl:part name="airbunk" type="s:string" />
+    <wsdl:part name="airTime" type="s:string" />
+    <wsdl:part name="payWay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPExactitude_V3HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1HttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="pnr" type="s:string" />
+    <wsdl:part name="isSpecial" type="s:string" />
+    <wsdl:part name="strPnrInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SPbyPNR_Note_V1HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataHttpPostIn">
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="ZKId" type="s:string" />
+    <wsdl:part name="AirCo" type="s:string" />
+    <wsdl:part name="FromCity" type="s:string" />
+    <wsdl:part name="ToCity" type="s:string" />
+    <wsdl:part name="CW" type="s:string" />
+    <wsdl:part name="IsSpecial" type="s:string" />
+    <wsdl:part name="UpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantPriceDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="airCo" type="s:string" />
+    <wsdl:part name="datetime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AlreadyDisposalSynchronizationNew_AirCoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicyHttpPostIn">
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+    <wsdl:part name="Sign" type="s:string" />
+    <wsdl:part name="OperateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFullGetPolicyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PlyIntefaceServiceSoap">
+    <wsdl:operation name="SPOne">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOneSoapIn" />
+      <wsdl:output message="tns:SPOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOne_ByDisposalSynchronizationSoapIn" />
+      <wsdl:output message="tns:SPOne_ByDisposalSynchronizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据时间获取到最后删除的数据</wsdl:documentation>
+      <wsdl:input message="tns:SPLastDataDeleteSoapIn" />
+      <wsdl:output message="tns:SPLastDataDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取航空公司信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAirCoSoapIn" />
+      <wsdl:output message="tns:GetAirCoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取城市信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCitySoapIn" />
+      <wsdl:output message="tns:GetCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountSoapIn" />
+      <wsdl:output message="tns:GetSeatDiscountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByAirSoapIn" />
+      <wsdl:output message="tns:GetSeatDiscountByAirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">把GetSeatDiscount返回的DataSet对象序列化并压缩后的字节数组</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByteSoapIn" />
+      <wsdl:output message="tns:GetSeatDiscountByteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitudeSoapIn" />
+      <wsdl:output message="tns:SPExactitudeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据订单号获取供应商上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeSoapIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据政策ID获取供应上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeByPlyIDSoapIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeByPlyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位和折扣对照表</wsdl:documentation>
+      <wsdl:input message="tns:GetFdSoapIn" />
+      <wsdl:output message="tns:GetFdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,返回GZIP压缩后的数据，原始数据为XML（AlreadyDisposalSynchronizationNew_All相同）,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_GZipSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_GZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AllSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V2SoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_AllSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_AllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新(新增返回出票有效期字段),时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2SoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">直降政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewFD_AllSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewFD_AllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">特价数据已处理的同步更新,返回GZIP压缩后的数据</wsdl:documentation>
+      <wsdl:input message="tns:DisposalSynchronizationSpecial_All_GZipSoapIn" />
+      <wsdl:output message="tns:DisposalSynchronizationSpecial_All_GZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByAirCodeGzipSoapIn" />
+      <wsdl:output message="tns:GetPolicyByAirCodeGzipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeGzipSoapIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeGzipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeSoapIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取已删除政策,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:GetDeletePolicySoapIn" />
+      <wsdl:output message="tns:GetDeletePolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取协调政策</wsdl:documentation>
+      <wsdl:input message="tns:GetRestrictPolicySoapIn" />
+      <wsdl:output message="tns:GetRestrictPolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteSoapIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,需用户提供提取编码信息配置号</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteByOfficeSoapIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteByOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">平台调用通知方法</wsdl:documentation>
+      <wsdl:input message="tns:TestOutticketInteriorSoapIn" />
+      <wsdl:output message="tns:TestOutticketInteriorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_TaoBaoSoapIn" />
+      <wsdl:output message="tns:SPExactitude_TaoBaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">压缩文件</wsdl:documentation>
+      <wsdl:input message="tns:GetZipSoapIn" />
+      <wsdl:output message="tns:GetZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V1SoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V1SoapIn" />
+      <wsdl:output message="tns:SPExactitude_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V2SoapIn" />
+      <wsdl:output message="tns:SPExactitude_V2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V3SoapIn" />
+      <wsdl:output message="tns:SPExactitude_V3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,返回票价、税费</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_Note_V1SoapIn" />
+      <wsdl:output message="tns:SPbyPNR_Note_V1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取平台运价信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPlantPriceDataSoapIn" />
+      <wsdl:output message="tns:GetPlantPriceDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AirCoSoapIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AirCoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">全量政策接口</wsdl:documentation>
+      <wsdl:input message="tns:GetFullGetPolicySoapIn" />
+      <wsdl:output message="tns:GetFullGetPolicySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PlyIntefaceServiceHttpGet">
+    <wsdl:operation name="SPOne">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOneHttpGetIn" />
+      <wsdl:output message="tns:SPOneHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOne_ByDisposalSynchronizationHttpGetIn" />
+      <wsdl:output message="tns:SPOne_ByDisposalSynchronizationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据时间获取到最后删除的数据</wsdl:documentation>
+      <wsdl:input message="tns:SPLastDataDeleteHttpGetIn" />
+      <wsdl:output message="tns:SPLastDataDeleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取航空公司信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAirCoHttpGetIn" />
+      <wsdl:output message="tns:GetAirCoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取城市信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCityHttpGetIn" />
+      <wsdl:output message="tns:GetCityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountHttpGetIn" />
+      <wsdl:output message="tns:GetSeatDiscountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByAirHttpGetIn" />
+      <wsdl:output message="tns:GetSeatDiscountByAirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">把GetSeatDiscount返回的DataSet对象序列化并压缩后的字节数组</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByteHttpGetIn" />
+      <wsdl:output message="tns:GetSeatDiscountByteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitudeHttpGetIn" />
+      <wsdl:output message="tns:SPExactitudeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据订单号获取供应商上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeHttpGetIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据政策ID获取供应上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeByPlyIDHttpGetIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeByPlyIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位和折扣对照表</wsdl:documentation>
+      <wsdl:input message="tns:GetFdHttpGetIn" />
+      <wsdl:output message="tns:GetFdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,返回GZIP压缩后的数据，原始数据为XML（AlreadyDisposalSynchronizationNew_All相同）,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_GZipHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_GZipHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AllHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V2HttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_AllHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_AllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新(新增返回出票有效期字段),时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2HttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">直降政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewFD_AllHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewFD_AllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">特价数据已处理的同步更新,返回GZIP压缩后的数据</wsdl:documentation>
+      <wsdl:input message="tns:DisposalSynchronizationSpecial_All_GZipHttpGetIn" />
+      <wsdl:output message="tns:DisposalSynchronizationSpecial_All_GZipHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByAirCodeGzipHttpGetIn" />
+      <wsdl:output message="tns:GetPolicyByAirCodeGzipHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeGzipHttpGetIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeGzipHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeHttpGetIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取已删除政策,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:GetDeletePolicyHttpGetIn" />
+      <wsdl:output message="tns:GetDeletePolicyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取协调政策</wsdl:documentation>
+      <wsdl:input message="tns:GetRestrictPolicyHttpGetIn" />
+      <wsdl:output message="tns:GetRestrictPolicyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteHttpGetIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,需用户提供提取编码信息配置号</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteByOfficeHttpGetIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteByOfficeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">平台调用通知方法</wsdl:documentation>
+      <wsdl:input message="tns:TestOutticketInteriorHttpGetIn" />
+      <wsdl:output message="tns:TestOutticketInteriorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_TaoBaoHttpGetIn" />
+      <wsdl:output message="tns:SPExactitude_TaoBaoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">压缩文件</wsdl:documentation>
+      <wsdl:input message="tns:GetZipHttpGetIn" />
+      <wsdl:output message="tns:GetZipHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V1HttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V1HttpGetIn" />
+      <wsdl:output message="tns:SPExactitude_V1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V2HttpGetIn" />
+      <wsdl:output message="tns:SPExactitude_V2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V3HttpGetIn" />
+      <wsdl:output message="tns:SPExactitude_V3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,返回票价、税费</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_Note_V1HttpGetIn" />
+      <wsdl:output message="tns:SPbyPNR_Note_V1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取平台运价信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPlantPriceDataHttpGetIn" />
+      <wsdl:output message="tns:GetPlantPriceDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AirCoHttpGetIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AirCoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">全量政策接口</wsdl:documentation>
+      <wsdl:input message="tns:GetFullGetPolicyHttpGetIn" />
+      <wsdl:output message="tns:GetFullGetPolicyHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PlyIntefaceServiceHttpPost">
+    <wsdl:operation name="SPOne">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOneHttpPostIn" />
+      <wsdl:output message="tns:SPOneHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过政策ID查询到指定政策,用于核对政策</wsdl:documentation>
+      <wsdl:input message="tns:SPOne_ByDisposalSynchronizationHttpPostIn" />
+      <wsdl:output message="tns:SPOne_ByDisposalSynchronizationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据时间获取到最后删除的数据</wsdl:documentation>
+      <wsdl:input message="tns:SPLastDataDeleteHttpPostIn" />
+      <wsdl:output message="tns:SPLastDataDeleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取航空公司信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAirCoHttpPostIn" />
+      <wsdl:output message="tns:GetAirCoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取城市信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCityHttpPostIn" />
+      <wsdl:output message="tns:GetCityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountHttpPostIn" />
+      <wsdl:output message="tns:GetSeatDiscountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取舱位信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByAirHttpPostIn" />
+      <wsdl:output message="tns:GetSeatDiscountByAirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">把GetSeatDiscount返回的DataSet对象序列化并压缩后的字节数组</wsdl:documentation>
+      <wsdl:input message="tns:GetSeatDiscountByteHttpPostIn" />
+      <wsdl:output message="tns:GetSeatDiscountByteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitudeHttpPostIn" />
+      <wsdl:output message="tns:SPExactitudeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据订单号获取供应商上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeHttpPostIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据政策ID获取供应上下班时间</wsdl:documentation>
+      <wsdl:input message="tns:GetProviderOnDutyTimeByPlyIDHttpPostIn" />
+      <wsdl:output message="tns:GetProviderOnDutyTimeByPlyIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取舱位和折扣对照表</wsdl:documentation>
+      <wsdl:input message="tns:GetFdHttpPostIn" />
+      <wsdl:output message="tns:GetFdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,返回GZIP压缩后的数据，原始数据为XML（AlreadyDisposalSynchronizationNew_All相同）,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_GZipHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_GZipHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AllHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V2HttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_AllHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_AllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">高返政策数据已处理的同步更新(新增返回出票有效期字段),时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2HttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewSpecial_All_V2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">直降政策数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNewFD_AllHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNewFD_AllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">特价数据已处理的同步更新,返回GZIP压缩后的数据</wsdl:documentation>
+      <wsdl:input message="tns:DisposalSynchronizationSpecial_All_GZipHttpPostIn" />
+      <wsdl:output message="tns:DisposalSynchronizationSpecial_All_GZipHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航空公司获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByAirCodeGzipHttpPostIn" />
+      <wsdl:output message="tns:GetPolicyByAirCodeGzipHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeGzipHttpPostIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeGzipHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据出港到港城市获取平台目前有效政策</wsdl:documentation>
+      <wsdl:input message="tns:GetPolicyByCityCodeHttpPostIn" />
+      <wsdl:output message="tns:GetPolicyByCityCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取已删除政策,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:GetDeletePolicyHttpPostIn" />
+      <wsdl:output message="tns:GetDeletePolicyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取协调政策</wsdl:documentation>
+      <wsdl:input message="tns:GetRestrictPolicyHttpPostIn" />
+      <wsdl:output message="tns:GetRestrictPolicyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteHttpPostIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,需用户提供提取编码信息配置号</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_NoteByOfficeHttpPostIn" />
+      <wsdl:output message="tns:SPbyPNR_NoteByOfficeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">平台调用通知方法</wsdl:documentation>
+      <wsdl:input message="tns:TestOutticketInteriorHttpPostIn" />
+      <wsdl:output message="tns:TestOutticketInteriorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_TaoBaoHttpPostIn" />
+      <wsdl:output message="tns:SPExactitude_TaoBaoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">压缩文件</wsdl:documentation>
+      <wsdl:input message="tns:GetZipHttpPostIn" />
+      <wsdl:output message="tns:GetZipHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_All_V1HttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_All_V1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费)</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V1HttpPostIn" />
+      <wsdl:output message="tns:SPExactitude_V1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V2HttpPostIn" />
+      <wsdl:output message="tns:SPExactitude_V2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据航班信息精确获取政策(实事数据,返回票面价及基建、燃油费),可选支持支付方式</wsdl:documentation>
+      <wsdl:input message="tns:SPExactitude_V3HttpPostIn" />
+      <wsdl:output message="tns:SPExactitude_V3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据PNR内容获取政策,返回票价、税费</wsdl:documentation>
+      <wsdl:input message="tns:SPbyPNR_Note_V1HttpPostIn" />
+      <wsdl:output message="tns:SPbyPNR_Note_V1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取平台运价信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPlantPriceDataHttpPostIn" />
+      <wsdl:output message="tns:GetPlantPriceDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">数据已处理的同步更新,时间格式:yyyy-MM-dd HH:mm:ss.fff</wsdl:documentation>
+      <wsdl:input message="tns:AlreadyDisposalSynchronizationNew_AirCoHttpPostIn" />
+      <wsdl:output message="tns:AlreadyDisposalSynchronizationNew_AirCoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">全量政策接口</wsdl:documentation>
+      <wsdl:input message="tns:GetFullGetPolicyHttpPostIn" />
+      <wsdl:output message="tns:GetFullGetPolicyHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PlyIntefaceServiceSoap" type="tns:PlyIntefaceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SPOne">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPOne_ByDisposalSynchronization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPLastDataDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetAirCo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscountByAir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscountByte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetProviderOnDutyTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetProviderOnDutyTimeByPlyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetFd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_GZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewSpecial_All" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewSpecial_All_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewFD_All" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/DisposalSynchronizationSpecial_All_GZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByAirCodeGzip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByCityCodeGzip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByCityCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetDeletePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetRestrictPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_Note" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_NoteByOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/TestOutticketInterior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_TaoBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_V1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_Note_V1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPlantPriceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_AirCo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <soap:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetFullGetPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PlyIntefaceServiceSoap12" type="tns:PlyIntefaceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SPOne">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPOne_ByDisposalSynchronization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPLastDataDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetAirCo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscountByAir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetSeatDiscountByte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetProviderOnDutyTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetProviderOnDutyTimeByPlyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetFd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_GZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewSpecial_All" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewSpecial_All_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNewFD_All" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/DisposalSynchronizationSpecial_All_GZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByAirCodeGzip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByCityCodeGzip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPolicyByCityCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetDeletePolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetRestrictPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_Note" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_NoteByOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/TestOutticketInterior" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_TaoBao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_All_V1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPExactitude_V3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/SPbyPNR_Note_V1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetPlantPriceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/AlreadyDisposalSynchronizationNew_AirCo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <soap12:operation soapAction="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx/GetFullGetPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PlyIntefaceServiceHttpGet" type="tns:PlyIntefaceServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SPOne">
+      <http:operation location="/SPOne" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <http:operation location="/SPOne_ByDisposalSynchronization" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <http:operation location="/SPLastDataDelete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <http:operation location="/GetAirCo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <http:operation location="/GetCity" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <http:operation location="/GetSeatDiscount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <http:operation location="/GetSeatDiscountByAir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <http:operation location="/GetSeatDiscountByte" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <http:operation location="/SPExactitude" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <http:operation location="/GetProviderOnDutyTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <http:operation location="/GetProviderOnDutyTimeByPlyID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <http:operation location="/GetFd" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <http:operation location="/AlreadyDisposalSynchronizationNew" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_GZip" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_V2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNewSpecial_All" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <http:operation location="/AlreadyDisposalSynchronizationNewSpecial_All_V2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNewFD_All" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <http:operation location="/DisposalSynchronizationSpecial_All_GZip" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <http:operation location="/GetPolicyByAirCodeGzip" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <http:operation location="/GetPolicyByCityCodeGzip" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <http:operation location="/GetPolicyByCityCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <http:operation location="/GetDeletePolicy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <http:operation location="/GetRestrictPolicy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <http:operation location="/SPbyPNR_Note" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <http:operation location="/SPbyPNR_NoteByOffice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <http:operation location="/TestOutticketInterior" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <http:operation location="/SPExactitude_TaoBao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <http:operation location="/GetZip" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_V1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <http:operation location="/SPExactitude_V1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <http:operation location="/SPExactitude_V2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <http:operation location="/SPExactitude_V3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <http:operation location="/SPbyPNR_Note_V1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <http:operation location="/GetPlantPriceData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_AirCo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <http:operation location="/GetFullGetPolicy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PlyIntefaceServiceHttpPost" type="tns:PlyIntefaceServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SPOne">
+      <http:operation location="/SPOne" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPOne_ByDisposalSynchronization">
+      <http:operation location="/SPOne_ByDisposalSynchronization" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPLastDataDelete">
+      <http:operation location="/SPLastDataDelete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirCo">
+      <http:operation location="/GetAirCo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <http:operation location="/GetCity" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscount">
+      <http:operation location="/GetSeatDiscount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByAir">
+      <http:operation location="/GetSeatDiscountByAir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatDiscountByte">
+      <http:operation location="/GetSeatDiscountByte" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude">
+      <http:operation location="/SPExactitude" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTime">
+      <http:operation location="/GetProviderOnDutyTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderOnDutyTimeByPlyID">
+      <http:operation location="/GetProviderOnDutyTimeByPlyID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFd">
+      <http:operation location="/GetFd" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew">
+      <http:operation location="/AlreadyDisposalSynchronizationNew" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_GZip">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_GZip" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V2">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_V2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNewSpecial_All" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewSpecial_All_V2">
+      <http:operation location="/AlreadyDisposalSynchronizationNewSpecial_All_V2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNewFD_All">
+      <http:operation location="/AlreadyDisposalSynchronizationNewFD_All" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposalSynchronizationSpecial_All_GZip">
+      <http:operation location="/DisposalSynchronizationSpecial_All_GZip" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByAirCodeGzip">
+      <http:operation location="/GetPolicyByAirCodeGzip" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCodeGzip">
+      <http:operation location="/GetPolicyByCityCodeGzip" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByCityCode">
+      <http:operation location="/GetPolicyByCityCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletePolicy">
+      <http:operation location="/GetDeletePolicy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictPolicy">
+      <http:operation location="/GetRestrictPolicy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note">
+      <http:operation location="/SPbyPNR_Note" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_NoteByOffice">
+      <http:operation location="/SPbyPNR_NoteByOffice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutticketInterior">
+      <http:operation location="/TestOutticketInterior" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_TaoBao">
+      <http:operation location="/SPExactitude_TaoBao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZip">
+      <http:operation location="/GetZip" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_All_V1">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_All_V1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V1">
+      <http:operation location="/SPExactitude_V1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V2">
+      <http:operation location="/SPExactitude_V2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPExactitude_V3">
+      <http:operation location="/SPExactitude_V3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SPbyPNR_Note_V1">
+      <http:operation location="/SPbyPNR_Note_V1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantPriceData">
+      <http:operation location="/GetPlantPriceData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlreadyDisposalSynchronizationNew_AirCo">
+      <http:operation location="/AlreadyDisposalSynchronizationNew_AirCo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullGetPolicy">
+      <http:operation location="/GetFullGetPolicy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlyIntefaceService">
+    <wsdl:port name="PlyIntefaceServiceSoap" binding="tns:PlyIntefaceServiceSoap">
+      <soap:address location="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PlyIntefaceServiceSoap12" binding="tns:PlyIntefaceServiceSoap12">
+      <soap12:address location="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PlyIntefaceServiceHttpGet" binding="tns:PlyIntefaceServiceHttpGet">
+      <http:address location="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PlyIntefaceServiceHttpPost" binding="tns:PlyIntefaceServiceHttpPost">
+      <http:address location="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

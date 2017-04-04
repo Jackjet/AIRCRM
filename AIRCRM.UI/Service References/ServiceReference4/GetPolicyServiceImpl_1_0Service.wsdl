@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://getpolicy.b2b.service.version1_0.webservice.model.ltips.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="GetPolicyServiceImpl_1_0Service" targetNamespace="http://getpolicy.b2b.service.version1_0.webservice.model.ltips.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://getpolicy.b2b.service.version1_0.webservice.model.ltips.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getPolicy" type="tns:getPolicy" />
+      <xs:element name="getPolicyReply" type="tns:getPolicyReply" />
+      <xs:element name="getPolicyRequest" type="tns:getPolicyRequest" />
+      <xs:element name="getPolicyResponse" type="tns:getPolicyResponse" />
+      <xs:complexType name="getPolicy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:getPolicyRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPolicyRequest">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:abstractLiantuoRequest">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="airlineCode" type="xs:string" />
+              <xs:element minOccurs="0" name="arrAirportCode" type="xs:string" />
+              <xs:element minOccurs="0" name="depAirportCode" type="xs:string" />
+              <xs:element minOccurs="0" name="needSpePricePolicy" type="xs:int" />
+              <xs:element minOccurs="0" name="needSpeRulePolicy" type="xs:int" />
+              <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+              <xs:element minOccurs="0" name="param1" type="xs:string" />
+              <xs:element minOccurs="0" name="param2" type="xs:string" />
+              <xs:element minOccurs="0" name="param3" type="xs:string" />
+              <xs:element minOccurs="0" name="param4" type="xs:string" />
+              <xs:element minOccurs="0" name="rowPerPage" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="abstractLiantuoRequest" abstract="true">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="agencyCode" type="xs:string" />
+          <xs:element minOccurs="0" name="sign" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPolicyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getPolicyReply" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPolicyReply">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:abstractLiantuoReply">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="param1" type="xs:string" />
+              <xs:element minOccurs="0" name="param2" type="xs:string" />
+              <xs:element minOccurs="0" name="param3" type="xs:string" />
+              <xs:element minOccurs="0" name="param4" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="policyDatas" nillable="true" type="tns:wsPolicyData" />
+              <xs:element minOccurs="0" name="totalPageCount" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="abstractLiantuoReply" abstract="true">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="returnCode" type="xs:string" />
+          <xs:element minOccurs="0" name="returnMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="returnStackTrace" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="wsPolicyData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="airlineCode" type="xs:string" />
+          <xs:element minOccurs="0" name="arrAirportExclude" type="xs:string" />
+          <xs:element minOccurs="0" name="baseinventoryNum" type="xs:string" />
+          <xs:element minOccurs="0" name="comment" type="xs:string" />
+          <xs:element minOccurs="0" name="commisionMoney" type="xs:double" />
+          <xs:element minOccurs="0" name="commisionPoint" type="xs:float" />
+          <xs:element minOccurs="0" name="depAirportExclude" type="xs:string" />
+          <xs:element minOccurs="0" name="depdateAndFlightSeatsExclude" type="xs:string" />
+          <xs:element minOccurs="0" name="earliestTicketDays" type="xs:int" />
+          <xs:element minOccurs="0" name="expiredDate" type="xs:string" />
+          <xs:element minOccurs="0" name="flightCourse" type="xs:string" />
+          <xs:element minOccurs="0" name="flightCycle" type="xs:string" />
+          <xs:element minOccurs="0" name="flightNoExclude" type="xs:string" />
+          <xs:element minOccurs="0" name="flightNoIncluding" type="xs:string" />
+          <xs:element minOccurs="0" name="inventoryPreFlightNoNum" type="xs:string" />
+          <xs:element minOccurs="0" name="inventorySource" type="xs:string" />
+          <xs:element minOccurs="0" name="inventoryType" type="xs:int" />
+          <xs:element minOccurs="0" name="isSpecialRulePolicy" type="xs:int" />
+          <xs:element minOccurs="0" name="latestTicketDays" type="xs:int" />
+          <xs:element minOccurs="0" name="needSwitchPNR" type="xs:int" />
+          <xs:element minOccurs="0" name="param1" type="xs:string" />
+          <xs:element minOccurs="0" name="param2" type="xs:string" />
+          <xs:element minOccurs="0" name="param3" type="xs:string" />
+          <xs:element minOccurs="0" name="param4" type="xs:string" />
+          <xs:element minOccurs="0" name="param5" type="xs:string" />
+          <xs:element minOccurs="0" name="policyBelongTo" type="xs:string" />
+          <xs:element minOccurs="0" name="policyId" type="xs:int" />
+          <xs:element minOccurs="0" name="policyStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="policyType" type="xs:string" />
+          <xs:element minOccurs="0" name="printTicketExpiredDate" type="xs:string" />
+          <xs:element minOccurs="0" name="printTicketStartDate" type="xs:string" />
+          <xs:element minOccurs="0" name="productType" type="xs:int" />
+          <xs:element minOccurs="0" name="routeType" type="xs:string" />
+          <xs:element minOccurs="0" name="seatClass" type="xs:string" />
+          <xs:element minOccurs="0" name="seatType" type="xs:int" />
+          <xs:element minOccurs="0" name="specialPrice" type="xs:double" />
+          <xs:element minOccurs="0" name="specialRules" type="tns:specialRules" />
+          <xs:element minOccurs="0" name="startDate" type="xs:string" />
+          <xs:element minOccurs="0" name="supplyOfficeNo" type="xs:string" />
+          <xs:element minOccurs="0" name="ticketSpeed" type="xs:string" />
+          <xs:element minOccurs="0" name="vtWorkTime" type="xs:string" />
+          <xs:element minOccurs="0" name="workTime" type="xs:string" />
+          <xs:element minOccurs="0" name="workWeek" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="specialRules">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="acceptLimitPriceSales" type="xs:boolean" />
+          <xs:element minOccurs="0" name="basePrice" type="xs:int" />
+          <xs:element minOccurs="0" name="changeRule" type="xs:string" />
+          <xs:element minOccurs="0" name="discount" type="xs:double" />
+          <xs:element minOccurs="0" name="endorsementRule" type="xs:boolean" />
+          <xs:element minOccurs="0" name="invoiceEnable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="invoicePrice" type="xs:string" />
+          <xs:element minOccurs="0" name="invoiceType" type="xs:string" />
+          <xs:element minOccurs="0" name="needCreatePNR" type="xs:boolean" />
+          <xs:element minOccurs="0" name="needSwitchPNR" type="xs:boolean" />
+          <xs:element minOccurs="0" name="needSwitchSeatClass" type="xs:boolean" />
+          <xs:element minOccurs="0" name="param1" type="xs:string" />
+          <xs:element minOccurs="0" name="param2" type="xs:string" />
+          <xs:element minOccurs="0" name="param3" type="xs:string" />
+          <xs:element minOccurs="0" name="param4" type="xs:string" />
+          <xs:element minOccurs="0" name="preferentialType" type="xs:int" />
+          <xs:element minOccurs="0" name="preferentialValue" type="xs:string" />
+          <xs:element minOccurs="0" name="refundRule" type="xs:string" />
+          <xs:element minOccurs="0" name="salesLimitPrice" type="xs:string" />
+          <xs:element minOccurs="0" name="specialProductType" type="xs:int" />
+          <xs:element minOccurs="0" name="ticketTime" type="xs:string" />
+          <xs:element minOccurs="0" name="vaidSeatClassOpen" type="xs:string" />
+          <xs:element minOccurs="0" name="vtExplain" type="xs:string" />
+          <xs:element minOccurs="0" name="vtFee" type="xs:string" />
+          <xs:element minOccurs="0" name="vtLimit" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPolicyResponse">
+    <wsdl:part name="parameters" element="tns:getPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPolicy">
+    <wsdl:part name="parameters" element="tns:getPolicy" />
+  </wsdl:message>
+  <wsdl:portType name="GetPolicyService_1_0">
+    <wsdl:operation name="getPolicy">
+      <wsdl:input name="getPolicy" message="tns:getPolicy" />
+      <wsdl:output name="getPolicyResponse" message="tns:getPolicyResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetPolicyServiceImpl_1_0ServiceSoapBinding" type="tns:GetPolicyService_1_0">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPolicy">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPolicy">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPolicyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetPolicyServiceImpl_1_0Service">
+    <wsdl:port name="GetPolicyServiceImpl_1_0Port" binding="tns:GetPolicyServiceImpl_1_0ServiceSoapBinding">
+      <soap:address location="http://wstest.51book.com:55779/ltips/services/getPolicyService1.0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="Extjs/bootstrap.js"></script>
+    <link href="Extjs/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css" rel="stylesheet" />
+    <script src="Extjs/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script>
+    <title></title>
+	<meta charset="utf-8" />
+    <style type="text/css">
+        /**去掉ExtJS5.1试用版本水印**/
+        .x-title-text-default::after {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript">
+        CreateViewPort = function (wTitle,sTitle,eTitle,tree){
+            Ext.create('Ext.container.Viewport', {
+                layout: 'border',
+                items: [{
+                    region: 'north',
+                    html: '<a><img src="logo.png"></img></a>',
+                    border: false,
+                    height: 100,
+                    bodyStyle: 'background:#157fcc; padding:10px;',
+                    margin: '0 0 5 0'
+                }, {
+                    region: 'west',
+                    collapsible: true,
+                    split: true,
+                    title: wTitle,
+                    items:tree,
+                    width: 350
+                }, {
+                    region: 'south',
+                    title: sTitle,
+                    collapsible: true,
+                    collapsed:true,
+                    html: '显示内容在这里',
+                    split: true,
+                    height: 100,
+                    minHeight: 100
+                }, {
+                    region: 'east',
+                    title: eTitle,
+                    collapsible: true,
+                    split: true,
+                    width: 350
+                }, {
+                    region: 'center',
+                    xtype: 'tabpanel', 
+                    activeTab: 0,     
+                    items: [{
+                        title: '首页',
+                        html: '显示内容在这里'
+                    }, {
+                        title: '第二页',
+                        html: '显示内容在这里'
+                    }, {
+                        title: '最后页',
+                        html: '显示内容在这里'
+                    }]
+                }]
+            });
+        }
+        var store = Ext.create('Ext.data.TreeStore', {
+            root: {
+                expanded: true,
+                children: [
+                    { text: "detention", leaf: true },
+                    {
+                        text: "homework", expanded: true, children: [
+                          { text: "book report", leaf: true },
+                          { text: "algebra", leaf: true }
+                        ]
+                    },
+                    { text: "buy lottery tickets", leaf: true }
+                ]
+            }
+        });
+
+       var tree =  Ext.create('Ext.tree.Panel', {
+            //title: 'Simple Tree',
+            width: 350,
+            //height: 150,
+            store: store,
+            //rootVisible: false,
+            //renderTo: Ext.getBody()
+        });
+        Ext.application({
+            name: 'myApp',
+            launch: function () {
+                CreateViewPort('导航菜单', '状态栏', '属性窗口',tree);
+            }
+        });
+        //Ext.onReady(function () {
+        //    CreateViewPort('导航菜单','状态栏','属性窗口');
+        //});
+    </script>
+</body>
+</html>

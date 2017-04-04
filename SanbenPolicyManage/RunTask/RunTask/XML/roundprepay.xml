@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 新增政策 -->
+<PolicyList>
+  <!-- 用户名 -->
+  <username></username>
+  <!-- 密码 -->
+  <password></password>
+  <!-- 扩展信息(可选) -->
+  <ext></ext>
+  <!-- 上传类型(只能取FULL或ADD,FULL-全量：30分钟时间间隔，一次不超过25万条，ADD-增量：5钟时间间隔，一次不超过5万条) -->
+  <execType></execType>
+  <!-- 政策类型:COMMON-表示普通政策,PREPAY-表示预付政策,APPLY-表示K位政策,CUSTOMER-表示团队政策,LOWPRICE表示特价政策 -->
+  <type></type>
+  <!-- 删除政策(可选),最多可一次删除10条，需在policy节点之前 -->
+  <DeletePolicy>
+    <!-- COMMON-表示普通政策,PREPAY-表示预付政策,APPLY-表示申请政策,CUSTOMER-表示包机切位政策,LOWPRICE-表示特价政策,
+         ROUNDPREPAY-往返预付政策,ROUNDSPECIAL-往返特价政策,SINGLEALL-单程所有类型政策,ROUNDALL-往返所有类型政策 -->
+    <type></type>
+    <!-- 航空公司二字码，必须大写，只支持一个航空公司(可选)-->
+    <flightcode></flightcode>
+    <!-- 政策标识，支持多个政策代码，多个政策代码以“,”分隔，最多支持1万个政策代码。
+         支持模糊检索，模糊检索部分用“*”代替。例：输入“abcpolicy*”，匹配“abcpolicy%”格式的所有政策（只支持* 在最后）(可选)-->
+    <policyCode></policyCode>
+    <!-- 出发地,出发机场三字代码，大写且只支持单个出发地(可选) -->
+    <dpt></dpt>
+    <!-- 目的地,到达机场三字代码，大写且只支持单个目的地(可选) -->
+    <arr></arr>
+    <!-- 舱位(往返政策对应去程舱位),舱位代码，大写且只支持单个舱位的录入，不支持子舱位(可选) -->
+    <cabin></cabin>
+    <!-- 旅行起始日期（往返政策对应去程旅行起始日期）格式为yyyy-MM-dd，日期不能早于当天(可选) -->
+    <startdate></startdate>
+    <!-- 旅行结束日期（往返政策对应去程旅行结束日期）格式为yyyy-MM-dd，日期不能早于旅行起始日期(可选) -->
+    <enddate></enddate>
+  </DeletePolicy>
+  <!-- 新增的政策内容(可选) -->
+  <Policy>
+    <!-- 航空公司，航空公司二字码，必须大写，只支持一个航空公司 -->
+    <flightcode></flightcode>
+    <!-- 政策标识，代理商内部政策代码，用于标识内部的政策(可选) -->
+    <policyCode></policyCode>
+    <!-- 出发地，出发机场三字代码，大写且只支持单个出发地 -->
+    <dpt></dpt>
+    <!-- 到达地，到达机场三字码，大写，普通政策支持最多25个机场，多个用英文的“,”分隔 -->
+    <arr></arr>
+    <!-- 去程航班限制，取值如下：所有、适用、不适用 -->
+    <one_flightlimit></one_flightlimit>
+    <!-- 去程航班号(可选)，
+                 1.航班限制为所有则不填
+                 2.适用则填写适用航班号，多个用英文的“,”分隔，最多不超过25个航班号
+                 3.不适用则填写不适用航班号 -->
+    <one_limitnum></one_limitnum>
+    <!-- 回程航班限制，取值如下：所有、适用、不适用-->
+    <two_flightlimit></two_flightlimit>
+    <two_limitnum></two_limitnum>
+    <!-- 回程航班号(可选)，
+                 1.航班限制为所有则不填
+                 2.适用则填写适用航班号，多个用英文的“,”分隔，最多不超过25个航班号
+                 3.不适用则填写不适用航班号 -->
+    <!-- 去程周中限制，1234567表示周一、周二、周三、周四、周五、周六、周日，不能为空 -->
+    <one_daylimit></one_daylimit>
+    <!-- 回程周中限制，1234567表示周一、周二、周三、周四、周五、周六、周日，不能为空 -->
+    <two_daylimit></two_daylimit>
+    <!-- 去程舱位，不支持多舱位 -->
+    <gocabin></gocabin>
+    <!-- 回程舱位，不支持多舱位 -->
+    <backcabin></backcabin>
+    <!-- 票面价/折扣，如果票面价类型为“指定票面价”此处填写票面价信息(普通政策填写0)，
+                      如果为“Y舱折扣”则填写折扣信息（如0.85表示85折）。 -->
+    <discountValue></discountValue>
+    <!-- 返点，如：5.5表示返5.5个点 -->
+    <returnpoint></returnpoint>
+    <!-- 留钱，支持正负整数 -->
+    <returnprice></returnprice>
+    <!-- 是否可以支付，取值“是”或“否”-->
+    <canPay></canPay>
+    <!-- 是否生成PNR，取值“是”或“否”-->
+    <needPnr></needPnr>
+    <!-- 是否进行PAT：A校验，取值“是”或“否”-->
+    <pata></pata>
+    <!-- 销售起始日期，格式为yyyy-MM-dd -->
+    <startdate_ticket></startdate_ticket>
+    <!-- 销售结束日期，格式为yyyy-MM-dd，日期不能早于销售起始日期
+                       注意：字段名为“enfdata_ticket”，不是“enddata_ticket” -->
+    <enfdate_ticket></enfdate_ticket>
+    <!-- 去程旅行起始日期，格式为yyyy-MM-dd -->
+    <one_startdate></one_startdate>
+    <!-- 旅行结束日，格式为yyyy-MM-dd,格式为yyyy-MM-dd，日期不能早于旅行起始日期 -->
+    <one_enddate></one_enddate>
+    <!-- 回程旅行起始日期，格式为yyyy-MM-dd -->
+    <two_startdate></two_startdate>
+    <!-- 回程旅行结束日，格式为yyyy-MM-dd,格式为yyyy-MM-dd，日期不能早于旅行起始日期 -->
+    <two_enddate></two_enddate>
+    <!-- 提前出票时限，正整数，大于等于0 (可选)-->
+    <beforeValidDay></beforeValidDay>
+    <!-- 退改签说明，最大不超过255个字符的文本 (可选)-->
+    <backnote></backnote>
+    <!-- 舱位说明，最大不超过255个字符 -->
+    <cabinnote></cabinnote>
+    <!-- 最短停留时间，默认为2小时。(可选)-->
+    <short_stoptime></short_stoptime>
+    <!-- 最长停留时间，默认为0天(可选)-->
+    <long_stoptime></long_stoptime>
+    <!-- 授权搭桥的OFFICE号(可选)，授权其它OFFICE号也可以提取订单的PNR信息。
+                             可以为空，最多两个OFFICE号，两个OFFICE号时中间用英文的逗号隔开-->
+    <officeno></officeno>
+    <!-- 行程单(可选)，0，仅提供发票
+                 1，行程单
+                 2，行程单和差额发票
+                 强制为1，必须提供行程单-->
+    <xcd></xcd>
+  </Policy>
+</PolicyList>

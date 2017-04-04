@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx?wsdl" docRef="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" xmlns:q1="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx" binding="q1:PlyIntefaceServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://demo2.8000yi.com:8002/WebInterface/PlyIntefaceService.asmx" xmlns:q2="http://websvr.8000yi.com:8080/newPly/WebInterface/PlyIntefaceService.asmx" binding="q2:PlyIntefaceServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
